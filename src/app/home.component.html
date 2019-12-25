@@ -1,0 +1,8 @@
+<h1>Secure crypto-wallet storage</h1>
+<div [hidden]="!authenticated()">
+  <p>Hello, click 'Wallets' to view and create crypto wallets</p>
+  <!--<p>The content is {{greeting.content}}</p>-->
+</div>
+<div [hidden]="authenticated()">
+  <p>Login to safely manipulate crypto wallets</p>
+</div>

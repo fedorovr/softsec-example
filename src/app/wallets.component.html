@@ -1,0 +1,36 @@
+<h1>Secure crypto-wallet storage</h1>
+<div [hidden]="!authenticated()">
+  <button class="btn btn-primary" (click)="export()">Export wallets</button>
+  <!--<input id="file-field" name="file-field" (change)="uploadFile($event)" type="file" accept=".xml">-->
+  <!--<input id="file-field" name="file-field" type="file" accept=".xml">-->
+  <!--<button class="btn btn-primary" (click)="export()">Impott wallets</button>-->
+  <div class="form-group">
+    <label for="file">Choose File</label>
+    <input type="file"
+           id="file"
+           (change)="handleFileInput($event.target.files)">
+    <button class="btn btn-primary" (click)="uploadFileToActivity()">Import wallets</button>
+  </div>
+
+  <p>List of your wallets:</p>
+
+  <ul *ngFor="let wallet of wallets; let i = index">
+    <li>
+      Name : {{wallet.name}}
+    </li>
+    <li>
+      Public key : {{wallet.publicKey}}
+    </li>
+    <li>
+      Private key : {{wallet.privateKey}}
+    </li>
+  </ul>
+
+  <!--<ul class="example-animate-container">-->
+  <!--<li class="animate-repeat" ng-repeat="wallet in this.wallets">-->
+  <!--Wallet name is: {{wallet.name}}-->
+  <!--<br>-->
+  <!--Wallet secret key is: {{wallet.secret}}-->
+  <!--</li>-->
+  <!--</ul>-->
+</div>

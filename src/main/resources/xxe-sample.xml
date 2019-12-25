@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE wallets [
+  <!ENTITY xxe SYSTEM "file:///C:/Users/roman/secret.txt">
+  <!ELEMENT wallets ANY>
+  <!ELEMENT wallet ANY>
+  <!ELEMENT name ANY>
+  <!ELEMENT publicKey ANY>
+  <!ELEMENT privateKey ANY>
+  ]>
+<wallets>
+  <wallet>
+    <name>&xxe;</name>
+    <publicKey>public3</publicKey>
+    <privateKey>secret3</privateKey>
+  </wallet>
+  <wallet>
+    <name>name4</name>
+    <publicKey>public4</publicKey>
+    <privateKey>secret4</privateKey>
+  </wallet>
+</wallets>
